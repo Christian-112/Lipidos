@@ -1,0 +1,740 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F7F8FA;
+  color: #4A5568;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+strong {
+  color: #1E3A5F;
+  font-weight: 600;
+}
+
+span{
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #CBD5E0;
+  margin-bottom: 4px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Encabezado */
+.encabezado-principal {
+  display: grid;
+  align-items: center;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/representacion-visual-estructura-proteina.avif);
+  height: 75vh;
+  color: #FFFFFF;
+  padding: 60px 40px 0 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.encabezado-contenido {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.encabezado-etiqueta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #A8D8BE;
+  margin-bottom: 16px;
+}
+
+.encabezado-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.encabezado-subtitulo {
+  font-size: 1.1rem;
+  color: #C8DFD4;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* Contenedor de imagen del encabezado */
+.encabezado-imagen-contenedor {
+  margin-top: 40px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.encabezado-imagen {
+  width: 100%;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-principal {
+  width: 90%;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+
+/* SECCIONES */
+.seccion {
+  margin-bottom: 20px;
+}
+
+.seccion-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.seccion-numero {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #D1E8DC;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.seccion-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #1E3A5F;
+  line-height: 1.2;
+}
+
+.seccion-descripcion {
+  color: #4A5568;
+  font-size: 1rem;
+  max-width: 750px;
+  margin-bottom: 36px;
+}
+
+/* Divisor entre secciones */
+.divisor {
+  width: 180px;
+  height: 3px;
+  background: linear-gradient(to right, #3D7A5C, #1E3A5F);
+  border-radius: 2px;
+  margin: 50px auto;
+}
+
+/* SECCIÓN 2: FUNCIONES — CUADRÍCULA DE TARJETAS */
+.cuadricula-funciones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tarjeta-funcion {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 24px;
+  border-top: 4px solid transparent;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-funcion:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Colores de borde por tipo de función */
+.tarjeta-energetica { 
+  border-top-color: #EAB308; 
+}
+.tarjeta-estructural  { 
+  border-top-color: #3D7A5C; 
+}
+.tarjeta-reguladora { 
+  border-top-color: #1E3A5F; 
+}
+.tarjeta-protectora { 
+  border-top-color: #7C3AED; 
+}
+.tarjeta-termica { 
+  border-top-color: #E05D3A; 
+}
+.tarjeta-transporte { 
+  border-top-color: #0891B2; 
+}
+
+.tarjeta-icono {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.tarjeta-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1E3A5F;
+  margin-bottom: 10px;
+}
+
+.tarjeta-texto {
+  font-size: 0.9rem;
+  color: #556070;
+  line-height: 1.65;
+  margin: 0;
+}
+
+
+/* SECCIÓN 3: Tipos de lipidos */
+
+/* Imagen del esquema de clasificación */
+.imagen-clasificacion-contenedor {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.imagen-clasificacion {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  min-height: 180px;
+  background-color: #EBF4F0;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Columnas de los dos grandes grupos */
+.columnas-tipos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.grupo-tipo {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Encabezado de cada grupo */
+.grupo-encabezado {
+  padding: 22px 24px;
+}
+
+.grupo-saponificable .grupo-encabezado {
+  background-color: #1E3A5F;
+  color: #FFFFFF;
+}
+
+.grupo-insaponificable .grupo-encabezado {
+  background-color: #2E6B4F;
+  color: #FFFFFF;
+}
+
+.grupo-etiqueta {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.grupo-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.grupo-descripcion {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Lista de sublípidos dentro de cada grupo */
+.lista-sublipidos {
+  padding: 8px 0;
+}
+
+.sublipido {
+  padding: 18px 24px;
+  border-bottom: 1px solid #EDF2F7;
+}
+
+.sublipido:last-child {
+  border-bottom: none;
+}
+
+.sublipido-nombre {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1E3A5F;
+  margin-bottom: 6px;
+}
+
+.sublipido-texto {
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* SECCIÓN 4: GRASAS SATURADAS */
+.introduccion-cuerpo {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.introduccion-texto {
+  flex: 1;
+  min-width: 280px;
+  font-size: 1rem;
+}
+
+.dato-clave {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #EBF4F0;
+  border-left: 4px solid #3D7A5C;
+  border-radius: 0 8px 8px 0;
+  padding: 14px 16px;
+  margin-top: 20px;
+}
+
+.dato-icono {
+  width: 1.3rem;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.dato-clave p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #2C5440;
+}
+
+/* Imagen de la seccion 1 */
+.introduccion-imagen-contenedor {
+  flex: 0 0 300px;
+  min-width: 220px;
+}
+
+.introduccion-imagen {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+}
+
+.pie-imagen {
+  font-size: 0.78rem;
+  color: #718096;
+  text-align: center;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+
+/* SECCIÓN 5: GRASAS INSATURADAS — CUADRÍCULA DE TARJETAS */
+.cuadricula-alimentos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tarjeta-alimento {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 24px;
+  border-top: 4px solid transparent;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-alimento:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Colores de borde por tipo de grasa insaturada */
+.tarjeta-monoinsaturada {
+  border-top-color: #3D7A5C;
+}
+.tarjeta-poliinsaturada {
+  border-top-color: #0891B2;
+}
+.tarjeta-fuente {
+  border-top-color: #EAB308;
+}
+.tarjeta-beneficio {
+  border-top-color: #E05D3A;
+}
+
+.tarjeta-icono {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.tarjeta-icono img{
+  width: 100%;
+  border-radius: 12px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.tarjeta-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1E3A5F;
+  margin-bottom: 10px;
+}
+
+.tarjeta-texto {
+  font-size: 0.9rem;
+  color: #556070;
+  line-height: 1.65;
+  margin: 0;
+}
+
+
+/* SECCIÓN 6: COLESTEROL LDL Y HDL */
+
+/* Imagen del esquema de colesterol */
+.imagen-clasificacion-contenedor {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.imagen-contenedor-clasificacion {
+  display: flex;
+  width: 100%;
+}
+
+.imagen-clasificacion {
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  height: 300px;
+  background-color: #EBF4F0;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Columnas LDL y HDL */
+.columnas-colesterol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.grupo-colesterol {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Encabezado de cada grupo de colesterol */
+.grupo-encabezado {
+  padding: 22px 24px;
+}
+
+.grupo-ldl .grupo-encabezado {
+  background-color: #1E3A5F;
+  color: #FFFFFF;
+}
+
+.grupo-hdl .grupo-encabezado {
+  background-color: #2E6B4F;
+  color: #FFFFFF;
+}
+
+.grupo-etiqueta {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.grupo-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.grupo-descripcion {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Lista de datos dentro de cada grupo */
+.lista-datos {
+  padding: 8px 0;
+}
+
+.dato-colesterol {
+  padding: 18px 24px;
+  border-bottom: 1px solid #EDF2F7;
+}
+
+.dato-colesterol:last-child {
+  border-bottom: none;
+}
+
+.dato-nombre {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1E3A5F;
+  margin-bottom: 6px;
+}
+
+.dato-texto {
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Comparacion LDL vs HDL */
+.comparacion-colesterol {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  padding: 28px 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-top: 12px;
+}
+
+.nota-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1E3A5F;
+  margin-bottom: 20px;
+}
+
+.nota-cuerpo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.nota-item {
+  padding: 18px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.nota-item h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.nota-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.colesterol-bueno {
+  background-color: #F0FDF4;
+  border-left: 4px solid #3D7A5C;
+  color: #2D5A3D;
+}
+
+.colesterol-malo {
+  background-color: #FFFBEB;
+  border-left: 4px solid #EAB308;
+  color: #7A5A00;
+}
+
+/* Imagen LDL y HDL */
+.LDL-HDL{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.imagen-buena {
+  width: 25%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.imagen-mala {
+  width: 25%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+
+/* SECCIÓN 7: PROTEINAS — CUADRÍCULA DE TARJETAS */
+.cuadricula-proteinas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tarjeta-proteina {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 24px;
+  border-top: 4px solid transparent;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-proteina:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Colores de borde por tipo de proteina */
+.tarjeta-carne {
+  border-top-color: #E05D3A;
+}
+.tarjeta-pescado {
+  border-top-color: #0891B2;
+}
+.tarjeta-huevo {
+  border-top-color: #EAB308;
+}
+.tarjeta-legumbre {
+  border-top-color: #3D7A5C;
+}
+.tarjeta-lacteo {
+  border-top-color: #1E3A5F;
+}
+.tarjeta-semilla {
+  border-top-color: #7C3AED;
+}
+
+
+/* Final de la pagina */
+.pie-pagina {
+  background-color: #1E3A5F;
+  color: #A0B4CB;
+  text-align: center;
+  padding: 30px 24px;
+  margin-top: 20px;
+}
+
+.pie-texto {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #CBD5E0;
+  margin-bottom: 4px;
+}
+
+.pie-credito {
+  font-size: 0.78rem;
+  color: #718096;
+  margin: 0;
+}
+
+
+/* La media */
+@media (max-width: 768px) {
+
+  .encabezado-titulo {
+    font-size: 2rem;
+  }
+
+  .encabezado-principal {
+    padding: 40px 20px 0 20px;
+  }
+
+  .contenedor-principal {
+    padding: 40px 16px;
+  }
+
+  .introduccion-cuerpo {
+    flex-direction: column;
+  }
+
+  .introduccion-imagen-contenedor {
+    flex: none;
+    width: 100%;
+  }
+
+  .columnas-colesterol {
+    grid-template-columns: 1fr;
+  }
+
+  .nota-cuerpo {
+    grid-template-columns: 1fr;
+  }
+
+  .cuadricula-alimentos {
+    grid-template-columns: 1fr;
+  }
+
+  .cuadricula-proteinas {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion-titulo {
+    font-size: 1.5rem;
+  }
+}
